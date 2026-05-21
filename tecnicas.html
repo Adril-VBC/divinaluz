@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Técnicas | Divina Luz</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+    background: radial-gradient(circle at center, #4b2a6e, #241432, #0d0812);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+.banner {
+    width: 100%;
+    background-image: url('bannergeom.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    box-sizing: border-box;
+}
+.banner h3, .banner h4 {
+    margin: 0;
+    padding: 4px 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7);
+}
+.btn-voltar {
+    display: block;
+    max-width: 200px;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #f0d060;
+    background: rgba(107, 63, 160, 0.3);
+    color: #f0d060;
+    font-size: 0.85rem;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+.btn-voltar:hover {
+    background: rgba(240, 208, 96, 0.15);
+}
+.carrossel-container {
+    max-width: 600px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.carrossel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+.card {
+    min-width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    background: rgba(107, 63, 160, 0.3);
+    border: 1px solid #f0d060;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.card h3 {
+    color: #f0d060;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.1em;
+}
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    color: #f0e6ff;
+}
+.btn-card {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #f0d060;
+    color: #f0d060;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-card:hover {
+    background: rgba(240, 208, 96, 0.15);
+}
+.nav-carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+.nav-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #f0d060;
+    background: rgba(107, 63, 160, 0.4);
+    color: #f0d060;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.dots {
+    display: flex;
+    gap: 8px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(240, 208, 96, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dot.ativo {
+    background: #f0d060;
+    width: 20px;
+    border-radius: 4px;
+}
+@media (max-width: 600px) {
+    .banner h3 { font-size: 1rem; }
+    .banner h4 { font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+<div class="banner">
+    <h3>Divina Luz | Terapias Holísticas</h3>
+    <h4>Especialista Em Apometria</h4>
+    <h4>E Terapia Multidimensional</h4>
+</div>
+
+<a href="index.html" class="btn-voltar">← Voltar</a>
+
+<div class="carrossel-container">
+    <div class="carrossel-wrapper" id="wrapper">
+        <div class="card">
+            <h3>Apometria</h3>
+            <p>Está se sentindo pesada, travada, com padrões que se repetem e não consegue mudar? A apometria faz uma limpeza profunda do seu campo energético — remove bloqueios, padrões herdados e influências externas. Você sente a diferença.</p>
+            <a href="https://youtube.com/@avbc-divinaluz?si=Wq81NHcntjEbDweS" target="_blank" class="btn-card">▶ Acesse o YouTube e receba uma mini sessão de auto apometria gratuitamente agora</a>
+        </div>
+        <div class="card">
+            <h3>Terapia Multidimensional</h3>
+            <p>Uma experiência profunda de cura e reequilíbrio. Em um estado meditativo guiado, você recebe passes energéticos, operações espirituais e a presença dos mestres e amparadores atuando no seu campo — trazendo leveza, alívio e renovação.</p>
+            <a href="https://youtube.com/@avbc-divinaluz?si=Wq81NHcntjEbDweS" target="_blank" class="btn-card">▶ Acesse o YouTube e receba uma mini sessão gratuitamente agora</a>
+        </div>
+    </div>
+    <div class="nav-carrossel">
+        <button class="nav-btn" onclick="mover(-1)">‹</button>
+        <div class="dots" id="dots"></div>
+        <button class="nav-btn" onclick="mover(1)">›</button>
+    </div>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+const wrapper = document.getElementById('wrapper');
+const dotsContainer = document.getElementById('dots');
+let atual = 0;
+let startX = 0;
+
+cards.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' ativo' : '');
+    dot.onclick = () => irPara(i);
+    dotsContainer.appendChild(dot);
+});
+
+function irPara(n) {
+    atual = (n + cards.length) % cards.length;
+    wrapper.style.transform = `translateX(-${atual * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => {
+        d.className = 'dot' + (i === atual ? ' ativo' : '');
+    });
+}
+
+function mover(dir) { irPara(atual + dir); }
+
+wrapper.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+wrapper.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) mover(diff > 0 ? 1 : -1);
+});
+</script>
+</body>
+</html>
